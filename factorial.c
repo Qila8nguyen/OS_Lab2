@@ -1,11 +1,10 @@
-#include<math.h>
 #include<stdlib.h>
 #include<stdio.h>
-#include<cstring>
+#include"factorial.h"
 
 char *factorial (const int aNumber) {
     int temp = aNumber;
-    int result = 1;
+    unsigned long long result = 1;
     while (temp > 1) {
         result *= temp;
         temp--;
@@ -13,7 +12,8 @@ char *factorial (const int aNumber) {
     char *res = malloc(4*sizeof(*res));
 
     temp = 0;
-    sprintf(res,"%d",result);
+    // printf("%llu \n", result);
+    sprintf(res,"%llu",result);
     while (res[temp]) {
         printf("%c ", res[temp]);
         temp++;

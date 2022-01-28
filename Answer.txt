@@ -1,0 +1,51 @@
+1. What are the advantages of Makefile? Give examples?
+-> It makes codes more concise and clear to read and debug.
+-> No need to compile entire program every time whenever you make a change to a functionality or a class. 
+Makefile will automatically compile only those files where change has occurred.
+-> Generally, in long codes or projects, Makefile is widely used in order to present project in more systematic and efficient way.
+
+For example:
+Suppose you have a program that you have split into two files, which you have imaginatively named file1.c and file2.c.  You can compile the program by running
+
+gcc file1.c file2.c -o yourprogram
+But this requires recompiling both files every time, even if only one has changed.  You can decompose the compilation steps into
+
+gcc -c file1.c
+gcc -c file2.c
+gcc file1.o file2.o -o yourprogram
+and then, when you edit one of the files, recompile only that file (and perform the linking step no matter what you changed).  
+But what if you edit one file, and then the other, and you forget that you edited both files, and accidentally recompile only one?
+
+That is when Makefile comes into rescue. As mentioned above, Makefile will recompile those files which have changed automatically
+without any manually detection.
+
+2. Is there any other automatic compilation tool besides Makefile? Give some names?
+Some of the BEST Build Automation Tools
+#1) Jenkins
+#2) Maven
+#3) Gradle
+#4) Travis CI
+#5) Bamboo
+#6) CircleCI
+#7) TeamCity
+#8) Apache Ant
+#9) BuildMaster
+#10) Codeship
+
+What are the reasons for creating new compilation tools?
+Challenges for Build Automation:
+
+#1) Longer builds: Longer builds take more time to run, it will increase the developer’s wait time and thereby reduces productivity.
+
+#2) Large volumes of builds: If a large volume of builds is running, then you will get limited access to the build servers for that specific period.
+
+#3) Complex builds: Complex builds may require extensive manual efforts and may reduce flexibility.
+
+Benefits Of Automation Build Tools
+Using the build automation software has several benefits as mentioned below:
+
+-> Saving time and money.
+-> Keeping a history of builds and releases. It will help in investigating the issue.
+-> Dependencies on key personnel will be eliminated through these tools.
+-> It will accelerate the process.
+-> It will perform redundant tasks.

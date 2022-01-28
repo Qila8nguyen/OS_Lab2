@@ -1,9 +1,7 @@
-#include<math.h>
 #include<stdlib.h>
-#include<stdbool.h>
 #include<stdio.h>
-#include <string.h>
 #include<ctype.h>
+#include"readline.h"
 
 int read_line (char *str) {
     int i =0;

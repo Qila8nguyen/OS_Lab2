@@ -1,5 +1,7 @@
-all: main.o factorial.o readline.o
-	gcc main.o factorial.o readline.o -o myfactorial
+objects = main.o factorial.o readline.o
+
+all: $(objects)
+	gcc $(objects) -o myfactorial
 
 main.o: main.c factorial.o readline.o
 	gcc -c main.c
@@ -10,5 +12,6 @@ factorial.o: factorial.c
 readline.o:	readline.c
 	gcc -c readline.c
 
+.PHONY: clean
 clean: 
-	rm -f *.o myfactorial
+	rm -f $(objects) myfactorial
