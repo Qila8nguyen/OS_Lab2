@@ -1,0 +1,6 @@
+make.exe --dry-run --keep-going --print-directory
+make.exe: Entering directory `d:/PHUONG_NGHI/LEARNING/HK212/OS/TestCode'
+ 
+gcc main.o factorial.o readline.o -o myfactorial
+make.exe: Leaving directory `d:/PHUONG_NGHI/LEARNING/HK212/OS/TestCode'
+ 
