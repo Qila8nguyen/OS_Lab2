@@ -14,4 +14,8 @@ readline.o:	readline.c
 
 .PHONY: clean
 clean: 
+<<<<<<< HEAD:MakeFile
 	rm -f $(objects) myfactorial
+=======
+	rm -f *.o myfactorial
+>>>>>>> 454418de4140ee2187345ee8de68de798bc2e261:Makefile
